@@ -138,7 +138,7 @@ func New(hashKey, blockKey []byte) *SecureCookie {
 		blockKey:  blockKey,
 		hashFunc:  sha256.New,
 		maxAge:    86400 * 30,
-		maxLength: 4096,
+		maxLength: 0,
 		sz:        GobEncoder{},
 	}
 	if len(hashKey) == 0 {
